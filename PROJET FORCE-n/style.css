@@ -1,0 +1,878 @@
+*{
+margin: 0%;
+padding:0 ;
+box-sizing: border-box;
+}
+body{
+font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: black;
+padding: 20px;
+}
+nav {
+
+    color: gold;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover {
+color: gold;
+}
+header{
+    height: 98vh;
+    background-image: url("image/image de restaurants.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+header h2{
+font-size: 50px;
+}
+header p{
+    font-size: 24PX;
+    margin: 20px 0;
+}
+header a {
+    background-color: gold;
+    color: black;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+@media screen and (max-width:768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction:column ;
+    text-align: center;
+    margin-top: 15px;
+  } 
+  nav ul li{
+    margin: 10px 0;
+  }
+  header{
+    height: 100vh;
+  }
+  header h2{
+    font-size: 35px;
+  }
+  header p{
+    font-size: 18px;
+  }
+  header a{
+    display: block;
+    width: 220px;
+    margin: 10px;
+    text-align: center;
+  }
+}
+/* SECTION MENU */
+
+.menu{
+    background: #C8A27A;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+
+.menu h2{
+    font-size: 45px;
+    color: #b8860b;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+.menu h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:3px;
+    background:#b8860b;
+    margin:15px auto;
+}
+
+
+.menu h3{
+    font-size:30px;
+    color:#111;
+    margin:50px 0 30px;
+}
+
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+
+.card{
+
+    width:300px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    transition:0.4s;
+}
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.card img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+
+}
+
+
+.card h4{
+
+    font-size:25px;
+    color:#b8860b;
+    margin:20px 0 10px;
+
+}
+
+
+.card p{
+
+    color:#555;
+    padding:0 20px;
+    line-height:1.6;
+
+}
+
+
+.card button{
+
+    background:#111;
+    color:#d4af37;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+    margin:20px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+
+.card button:hover{
+
+    background:#d4af37;
+    color:#111;
+
+}
+
+.apropos{
+    padding: 80px 10%;
+    text-align: center;
+    background-color: #f5f0e6;
+}
+
+
+.apropos h2{
+    font-size: 45px;
+    color: #b8860b;
+    margin-bottom: 30px;
+}
+
+
+.apropos p{
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+}
+
+.valeurs{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+
+.valeurs div{
+    width: 250px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+
+.valeurs div:hover{
+    transform: translateY(-10px);
+}
+
+
+.valeurs h3{
+    color: #b8860b;
+    margin-bottom: 15px;
+}
+
+
+.valeurs p{
+    font-size: 16px;
+}
+
+
+/* Responsive téléphone */
+
+@media(max-width:768px){
+
+    .apropos h2{
+        font-size: 32px;
+    }
+
+    .valeurs{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.galerie{
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #f5f0e6;
+}
+
+
+.galerie h2{
+    font-size: 45px;
+    color: #b8860b;
+    margin-bottom: 40px;
+}
+
+
+.galerie-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.galerie-container img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+
+.galerie-container img:hover{
+    transform: scale(1.05);
+}
+
+
+/* Téléphone */
+
+@media(max-width:768px){
+
+    .galerie-container{
+        grid-template-columns: 1fr;
+    }
+
+}/* PAGE CONTACT + RESERVATION */
+
+.contact{
+    padding: 80px 8%;
+    background-color: #f3ead8;
+    min-height: 100vh;
+}
+
+
+.contact h2{
+    text-align: center;
+    font-size: 45px;
+    color: #8b5e34;
+    margin-bottom: 50px;
+}
+
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+/* Carte informations */
+
+.infos{
+
+    background: white;
+    width: 350px;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+.infos h3{
+
+    color: #b8860b;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+}
+
+
+.infos p{
+
+    font-size: 17px;
+    margin: 20px 0;
+    color: #555;
+
+}
+
+
+/* Formulaire */
+
+form{
+
+    background: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+form h3{
+
+    text-align: center;
+    color: #b8860b;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+}
+
+
+form input,
+form textarea{
+
+    width: 100%;
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: none;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+}
+
+
+form textarea{
+
+    height: 120px;
+    resize: none;
+
+}
+
+
+form button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #8b5e34;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+form button:hover{
+
+    background: #b8860b;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .contact h2{
+        font-size: 32px;
+    }
+
+
+    form,
+    .infos{
+
+        width: 100%;
+
+    }
+
+}/* PAGE CONTACT + RESERVATION */
+
+.contact{
+    padding: 80px 8%;
+    background-color: #f3ead8;
+    min-height: 100vh;
+}
+
+
+.contact h2{
+    text-align: center;
+    font-size: 45px;
+    color: #8b5e34;
+    margin-bottom: 50px;
+}
+
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+/* Carte informations */
+
+.infos{
+
+    background: white;
+    width: 350px;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+.infos h3{
+
+    color: #b8860b;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+}
+
+
+.infos p{
+
+    font-size: 17px;
+    margin: 20px 0;
+    color: #555;
+
+}
+
+
+/* Formulaire */
+
+form{
+
+    background: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+form h3{
+
+    text-align: center;
+    color: #b8860b;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+}
+
+
+form input,
+form textarea{
+
+    width: 100%;
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: none;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+}
+
+
+form textarea{
+
+    height: 120px;
+    resize: none;
+
+}
+
+
+form button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #8b5e34;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+form button:hover{
+
+    background: #b8860b;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .contact h2{
+        font-size: 32px;
+    }
+
+
+    form,
+    .infos{
+
+        width: 100%;
+
+    }
+
+} /* PAGE CONTACT + RESERVATION */
+
+.contact{
+    padding: 80px 8%;
+    background-color: #f3ead8;
+    min-height: 100vh;
+}
+
+
+.contact h2{
+    text-align: center;
+    font-size: 45px;
+    color: #8b5e34;
+    margin-bottom: 50px;
+}
+
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+/* Carte informations */
+
+.infos{
+
+    background: white;
+    width: 350px;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+.infos h3{
+
+    color: #b8860b;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+}
+
+
+.infos p{
+
+    font-size: 17px;
+    margin: 20px 0;
+    color: #555;
+
+}
+
+
+/* Formulaire */
+
+form{
+
+    background: white;
+    width: 400px;
+    padding: 40px;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+
+form h3{
+
+    text-align: center;
+    color: #b8860b;
+    font-size: 28px;
+    margin-bottom: 25px;
+
+}
+
+
+form input,
+form textarea{
+
+    width: 100%;
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border: none;
+
+    background: #f5f5f5;
+
+    border-radius: 10px;
+
+    outline: none;
+
+}
+
+
+form textarea{
+
+    height: 120px;
+    resize: none;
+
+}
+
+
+form button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #8b5e34;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+form button:hover{
+
+    background: #b8860b;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .contact h2{
+        font-size: 32px;
+    }
+
+
+    form,
+    .infos{
+
+        width: 100%;
+
+    }
+
+}/* ===========================
+   PAGE COMMANDE
+=========================== */
+
+.commande{
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.commande h2{
+    text-align: center;
+    color: goldenrod;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.commande p{
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.commande form{
+    display: flex;
+    flex-direction: column;
+}
+
+.commande label{
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.commande input,
+.commande select,
+.commande textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.commande input:focus,
+.commande select:focus,
+.commande textarea:focus{
+    border-color: goldenrod;
+}
+
+.commande textarea{
+    resize: vertical;
+}
+
+.commande button{
+    margin-top: 25px;
+    padding: 15px;
+    background: goldenrod;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.commande button:hover{
+    background: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+
+@media screen and (max-width:768px){
+
+    .commande{
+        width: 90%;
+        padding: 20px;
+    }
+
+    .commande h2{
+        font-size: 28px;
+    }
+
+    .commande button{
+        width: 100%;
+    }
+
+}

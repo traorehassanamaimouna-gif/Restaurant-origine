@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander - Restaurant ORIGINE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>ORIGINE</h1>
+
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="commande">
+
+    <h2>Finaliser votre commande</h2>
+
+    <p>Remplissez ce formulaire pour passer votre commande.</p>
+
+    <form>
+
+        <label>Nom complet</label>
+        <input type="text" placeholder="Votre nom" required>
+
+        <label>Téléphone</label>
+        <input type="tel" placeholder="Votre numéro" required>
+
+        <label>Plat choisi</label>
+        <select required>
+            <option>Alloco</option>
+            <option>Salade tropicale</option>
+            <option>Attiéké poisson</option>
+            <option>Poulet braisé</option>
+            <option>foutou sauce graine</option>
+            <option>Mafé</option>
+            <option>riz djolofe</option>
+            <option>Thiéboudienne</option>
+        </select>
+
+        <label>Boisson</label>
+        <select>
+            <option>Aucune</option>
+            <option>jus de tamarin</option>
+            <option>Jus de bissap</option>
+            <option>Jus de gingembre</option>
+        </select>
+
+        <label>Quantité</label>
+        <input type="number" min="1" value="1">
+
+        <label>Piment</label>
+        <select>
+            <option>Sans piment</option>
+            <option>Piment léger</option>
+            <option>Très pimenté</option>
+        </select>
+
+        <label>Adresse de livraison</label>
+        <textarea rows="3" placeholder="Entrez votre adresse"></textarea>
+
+        <label>Instructions supplémentaires</label>
+        <textarea rows="4" placeholder="Exemple : sans oignons, plus de sauce..."></textarea>
+
+        <button type="submit">Valider la commande</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Restaurant ORIGINE - Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
